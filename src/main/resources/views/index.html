@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script type="module" src="https://cdn.skypack.dev/@hotwired/turbo"></script>
+</head>
+<body>
+<p>
+    Click <a th:href="@{/}">Home</a> to return to home page.
+</p>
+<p>
+In this order:
+    <ol>
+    <li>Load the page with weather and verify presence of the weather widget</li>
+    <li>Load the page without weather and verify absence of the weather widget</li>
+    <li>Load the page with weather and verify absence of the weather widget</li>
+    </ol>
+Clicking <b>Home</b> for step 2 will have the same effect as loading the page wihtout the weather widget.
+</p>
+<turbo-frame id="main">
+    <a th:href="@{/withWeather}">Show Page With Weather</a><br/>
+    <a th:href="@{/withoutWeather}">Show Page Without Weather</a>
+</turbo-frame>
+</body>
+</html>
